@@ -2,188 +2,293 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Quickfix Financial Services | Credit Repair</title>
+<title>Quickfix Financial Services | Credit Repair & Credit Building</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 :root {
-  --blue:#1f6fd2;
-  --green:#2bb673;
+  --blue:#0f4fa8;
+  --green:#1fa97c;
   --dark:#0b1f33;
-  --light:#f7faff;
+  --light:#f8fbff;
 }
 
-* { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:Arial,Helvetica,sans-serif; background:var(--light); color:#222; }
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:#222;
+}
 
-.topbar {
-  background:var(--dark);
+a { text-decoration:none; }
+
+.container {
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* HEADER */
+header {
+  background:linear-gradient(135deg,var(--blue),var(--green));
   color:#fff;
-  font-size:14px;
-  padding:8px 16px;
+  padding:14px 0;
+}
+
+.header-flex {
   display:flex;
+  align-items:center;
   justify-content:space-between;
   flex-wrap:wrap;
 }
 
-header {
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:16px;
-  border-bottom:1px solid #e5e5e5;
+.logo {
+  height:55px;
 }
 
-header img { height:48px; }
-
-nav a {
-  margin-left:16px;
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
+.header-info {
+  text-align:right;
+  font-size:14px;
 }
 
-.btn {
-  padding:12px 20px;
-  border-radius:30px;
-  font-weight:bold;
-  text-decoration:none;
-  display:inline-block;
-}
-
-.btn-primary {
-  background:linear-gradient(135deg,var(--blue),var(--green));
+.header-info a {
   color:#fff;
+  font-weight:bold;
 }
 
+/* HERO */
 .hero {
-  background:linear-gradient(135deg,#e9f2ff,#ecfff5);
-  padding:60px 20px;
+  background:linear-gradient(to right, #eef6ff, #f4fffb);
+  padding:90px 20px;
+}
+
+.hero-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
   align-items:center;
 }
 
-.hero img {
-  width:100%;
-  border-radius:20px;
-}
-
 .hero h1 {
-  font-size:42px;
-  margin-bottom:16px;
+  font-size:44px;
+  color:var(--dark);
 }
 
 .hero p {
   font-size:18px;
-  margin-bottom:24px;
+  line-height:1.6;
 }
 
-.section {
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
+.hero img {
+  width:100%;
+  border-radius:16px;
 }
 
-.grid {
+/* BUTTONS */
+.btn {
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:bold;
+  background:linear-gradient(135deg,var(--blue),var(--green));
+  color:#fff;
+  margin-right:10px;
+}
+
+/* PRICING */
+.pricing {
+  background:var(--light);
+  padding:80px 20px;
+  text-align:center;
+}
+
+.pricing-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
 
-.card {
+.plan {
   background:#fff;
   padding:30px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
 
+.plan.featured {
+  border:3px solid var(--green);
+  transform:scale(1.05);
+}
+
+.price {
+  font-size:42px;
+  color:var(--green);
+  font-weight:bold;
+}
+
+.plan ul {
+  list-style:none;
+  padding:0;
+  text-align:left;
+}
+
+/* TRUST */
+.trust {
+  padding:80px 20px;
+}
+
+.trust-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.review {
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* IMAGES */
+.gallery {
+  background:#fff;
+  padding:80px 20px;
+}
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:14px;
+}
+
+/* FOOTER */
 footer {
   background:var(--dark);
   color:#fff;
   padding:40px 20px;
   text-align:center;
-  margin-top:60px;
 }
 
-footer a { color:#8cc8ff; text-decoration:none; }
-
 @media(max-width:768px){
-  .hero { grid-template-columns:1fr; }
-  header { flex-direction:column; gap:12px; }
+  .hero-grid { grid-template-columns:1fr; }
+  .header-info { text-align:center; margin-top:10px; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <div>📍 Sunrise, FL</div>
-  <div>Mon–Sat 9:00 AM – 7:00 PM | 📞 754-777-0490</div>
-</div>
-
 <header>
-  <img src="logo.png" alt="Quickfix Financial Services">
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#how">How It Works</a>
-    <a href="payments.html">Payments</a>
-    <a href="#contact" class="btn btn-primary">Get Started</a>
-  </nav>
+  <div class="container header-flex">
+    <img src="logo.png" class="logo" alt="Quickfix Financial Services">
+    <div class="header-info">
+      <a href="tel:17547770490">📞 754-777-0490</a><br>
+      📍 Sunrise, FL · Mon–Sat 9AM–7PM
+    </div>
+  </div>
 </header>
 
 <section class="hero">
-  <div>
-    <span style="color:var(--green);font-weight:bold;">✔ Credit Repair • Build Stronger Credit</span>
-    <h1>Professional Credit Repair & Credit Solutions You Can Understand</h1>
-    <p>
-      We dispute inaccurate items, improve credit habits, and guide you through a clear,
-      step-by-step plan toward stronger credit — with transparency and education.
-    </p>
-    <a href="#plans" class="btn btn-primary">View Plans & Pricing</a>
-    <a href="payments.html" class="btn" style="margin-left:12px;border:2px solid var(--blue);color:var(--blue);">Make a Payment</a>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Happy clients">
-</section>
-
-<section id="services" class="section">
-  <h2 style="text-align:center;margin-bottom:40px;">What We Help You With</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Credit Repair</h3>
-      <p>Disputing inaccurate, outdated, or unverifiable negative items.</p>
+  <div class="container hero-grid">
+    <div>
+      <h1>Professional Credit Repair & Credit Building</h1>
+      <p>
+        We help remove inaccurate negative items, build strong credit profiles,
+        and guide you step-by-step toward approvals for homes, cars, and funding.
+      </p>
+      <a href="#pricing" class="btn">View Plans</a>
+      <a href="#trust" class="btn">Why Clients Trust Us</a>
     </div>
-    <div class="card">
-      <h3>Credit Building</h3>
-      <p>Utilization optimization, payment history improvement, and strategy.</p>
-    </div>
-    <div class="card">
-      <h3>Education</h3>
-      <p>Understand your credit — no confusion, just clarity.</p>
-    </div>
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="New Home">
   </div>
 </section>
 
-<section id="how" class="section">
-  <h2 style="text-align:center;margin-bottom:40px;">How It Works</h2>
-  <div class="grid">
-    <div class="card">1️⃣ Free Credit Evaluation</div>
-    <div class="card">2️⃣ Custom Dispute Strategy</div>
-    <div class="card">3️⃣ Ongoing Progress & Updates</div>
-    <div class="card">4️⃣ Stronger Credit Foundation</div>
+<section class="gallery">
+  <div class="container gallery-grid">
+    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Happy Family Home">
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="New Car">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Family Success">
   </div>
 </section>
 
-<footer id="contact">
-  <p><strong>Quickfix Financial Services</strong></p>
-  <p>📞 754-777-0490 | ✉ info@quickfixfinancialservice.com</p>
-  <p>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a>
-  </p>
+<section class="pricing" id="pricing">
+  <h2>Our Credit Solutions</h2>
+
+  <div class="pricing-grid container">
+
+    <div class="plan">
+      <h3>Credit Builder Plan</h3>
+      <div class="price">$400</div>
+      <ul>
+        <li>✔ Authorized user tradeline</li>
+        <li>✔ Credit profile build-out</li>
+        <li>✔ Monthly credit updates</li>
+        <li>✔ Consultation call</li>
+      </ul>
+      <a class="btn" href="#">Get Started</a>
+    </div>
+
+    <div class="plan featured">
+      <h3>Premium Plan</h3>
+      <div class="price">$600</div>
+      <ul>
+        <li>✔ Full negative item sweep</li>
+        <li>✔ High-limit tradeline</li>
+        <li>✔ Client portal access</li>
+        <li>✔ 24/7 support</li>
+      </ul>
+      <a class="btn" href="#">Get Started</a>
+    </div>
+
+    <div class="plan">
+      <h3>Premium Plus</h3>
+      <div class="price">$800</div>
+      <ul>
+        <li>✔ Multiple dispute rounds</li>
+        <li>✔ Inquiry removals</li>
+        <li>✔ 2 tradelines</li>
+        <li>✔ Strategy calls</li>
+      </ul>
+      <a class="btn" href="#">Get Started</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="trust" id="trust">
+  <h2 style="text-align:center;color:var(--blue)">Trusted by Our Clients</h2>
+
+  <div class="trust-grid container">
+    <div class="review">
+      ⭐⭐⭐⭐⭐  
+      <p>“My score jumped over 100 points and I bought my first home.”</p>
+      <strong>— Maria R.</strong>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐  
+      <p>“Quickfix helped me get approved for a car I never thought possible.”</p>
+      <strong>— Jason M.</strong>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐  
+      <p>“Professional, honest, and transparent. Highly recommend.”</p>
+      <strong>— Danielle S.</strong>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Quickfix Financial Services  
+  <br>
+  📞 754-777-0490 · info@quickfixfinancialservice.com
 </footer>
 
 </body>
