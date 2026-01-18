@@ -2,157 +2,552 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quickfix Financial Services | Credit Repair</title>
-  <meta name="description" content="Quickfix Financial Services — credit repair, disputes, consulting, and credit building tools." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Quickfix Financial Services — credit repair, dispute strategies, tradelines, and client support to help you build stronger credit." />
+
+  <style>
+    :root{
+      --blue:#0b5fbf;
+      --blue2:#0b78d1;
+      --green:#22c55e;
+      --dark:#071427;
+      --text:#0a1b2e;
+      --muted:#5b6b7e;
+      --bg:#f6fbff;
+      --card:#ffffff;
+      --border:rgba(10,27,46,.12);
+      --shadow: 0 18px 50px rgba(7,20,39,.10);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;color:var(--text);background:linear-gradient(180deg,#ffffff 0%, var(--bg) 60%, #ffffff 100%);}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Top info bar */
+    .topbar{
+      background: linear-gradient(90deg, rgba(11,95,191,.10), rgba(34,197,94,.10));
+      border-bottom:1px solid var(--border);
+      padding:10px 14px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .topbar .wrap{
+      max-width:1100px;margin:0 auto;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;border:1px solid var(--border);border-radius:999px;background:#fff;
+    }
+    .pill strong{color:var(--text)}
+    .pill a{color:var(--blue)}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.86);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      max-width:1100px;margin:0 auto;padding:12px 14px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;min-width:220px;
+    }
+    .brand img{
+      height:46px;width:auto;
+    }
+    .brand .name{
+      display:flex;flex-direction:column;line-height:1.05;
+    }
+    .brand .name b{font-size:15px}
+    .brand .name span{font-size:12px;color:var(--muted)}
+
+    .menu{
+      display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:flex-end;
+    }
+    .menu a{
+      padding:10px 10px;border-radius:12px;font-weight:600;color:rgba(10,27,46,.78);
+    }
+    .menu a:hover{background:rgba(11,95,191,.08);color:var(--text)}
+    .cta{
+      display:flex;align-items:center;gap:10px;
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:14px;font-weight:800;border:1px solid var(--border);
+      transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(7,20,39,.10)}
+    .btn.primary{
+      background: linear-gradient(90deg, var(--blue2), var(--green));
+      color:#fff;border:none;
+    }
+    .btn.secondary{
+      background:#fff;color:var(--blue);border:2px solid rgba(11,95,191,.25);
+    }
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:20px 14px 70px}
+    .grid{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;
+    }
+    .hero-card{
+      background:rgba(255,255,255,.80);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .hero{
+      padding:28px 22px 18px;
+      background:
+        radial-gradient(900px 260px at 0% 0%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(800px 260px at 100% 0%, rgba(11,120,209,.20), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.85), rgba(246,251,255,.90));
+    }
+    .hero h1{
+      margin:0;
+      font-size: clamp(34px, 5vw, 54px);
+      letter-spacing:-.02em;
+      line-height:1.0;
+    }
+    .hero p{
+      margin:14px 0 0;
+      color:rgba(10,27,46,.76);
+      font-size:16px;
+      line-height:1.55;
+      max-width:62ch;
+    }
+
+    .hero-bullets{
+      margin:18px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .hero-bullets li{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.72);
+      border:1px solid rgba(10,27,46,.08);
+      font-weight:650;color:rgba(10,27,46,.86);font-size:14px;
+    }
+    .check{
+      width:22px;height:22px;border-radius:999px;
+      background:rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.35);
+      display:inline-flex;align-items:center;justify-content:center;
+      color:var(--green);font-weight:900;
+      flex:0 0 auto;margin-top:1px;
+    }
+
+    .hero-actions{
+      margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;
+    }
+
+    .image-card{
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+    .image-card .caption{
+      padding:14px 16px;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      border-top:1px solid var(--border);
+      color:rgba(10,27,46,.72);
+      font-size:13px;
+    }
+
+    /* Sections */
+    section{margin-top:26px}
+    .section-title{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;
+      margin:26px 0 14px;
+    }
+    .section-title h2{margin:0;font-size:26px;letter-spacing:-.01em}
+    .section-title p{margin:0;color:var(--muted);max-width:70ch}
+
+    .cards{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(7,20,39,.07);
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:rgba(10,27,46,.72);line-height:1.55}
+    .card ul{margin:12px 0 0;padding-left:18px;color:rgba(10,27,46,.74);line-height:1.6}
+
+    /* Programs */
+    #programs .program-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    }
+    .program{
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(246,251,255,.95));
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:0 18px 40px rgba(7,20,39,.10);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .program:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background: radial-gradient(700px 200px at 0% 0%, rgba(34,197,94,.20), transparent 55%),
+                  radial-gradient(700px 200px at 100% 0%, rgba(11,120,209,.22), transparent 55%);
+      opacity:.75;
+      pointer-events:none;
+    }
+    .program > *{position:relative}
+    .program .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-weight:800;font-size:12px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(10,27,46,.10);
+      background:rgba(255,255,255,.75);
+      color:rgba(10,27,46,.70);
+    }
+    .program h3{margin:12px 0 4px;font-size:20px}
+    .program .price{font-size:34px;font-weight:900;margin:8px 0 10px;letter-spacing:-.02em}
+    .program .price small{font-size:14px;color:rgba(10,27,46,.55);font-weight:700}
+    .program ul{margin:10px 0 14px;padding:0;list-style:none;display:grid;gap:10px}
+    .program ul li{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.72);
+      border:1px solid rgba(10,27,46,.08);
+      color:rgba(10,27,46,.78);font-weight:650;font-size:14px;
+    }
+    .program .footer{display:flex;gap:10px;flex-wrap:wrap}
+    .program.featured{
+      border:2px solid rgba(34,197,94,.45);
+      transform:translateY(-2px);
+    }
+
+    /* Trust / reviews */
+    .reviews{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    }
+    .review{
+      background:#fff;border:1px solid var(--border);border-radius:18px;
+      padding:16px;box-shadow:0 12px 30px rgba(7,20,39,.07);
+    }
+    .stars{color:#f59e0b;font-weight:900;letter-spacing:1px}
+    .review p{margin:10px 0 0;color:rgba(10,27,46,.75);line-height:1.55}
+    .review b{display:block;margin-top:12px}
+
+    /* Big banner sections */
+    .banner{
+      background:
+        radial-gradient(900px 260px at 0% 0%, rgba(11,120,209,.18), transparent 60%),
+        radial-gradient(900px 260px at 100% 0%, rgba(34,197,94,.16), transparent 60%),
+        linear-gradient(180deg, #ffffff, rgba(246,251,255,.95));
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .banner h2{margin:0 0 8px;font-size:24px}
+    .banner p{margin:0;color:rgba(10,27,46,.74);line-height:1.6}
+    .banner small{display:block;margin-top:10px;color:rgba(10,27,46,.55)}
+
+    footer{
+      margin-top:40px;
+      border-top:1px solid var(--border);
+      padding-top:18px;
+      color:rgba(10,27,46,.70);
+      font-size:14px;
+    }
+    footer .fwrap{
+      display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:center;
+    }
+    footer a{color:var(--blue);font-weight:700}
+
+    /* Mobile */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      .cards,.reviews,#programs .program-grid{grid-template-columns:1fr}
+      .hero-bullets{grid-template-columns:1fr}
+      .brand .name{display:none}
+      .menu{gap:6px}
+      .menu a{padding:10px 8px}
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="Quickfix Financial Services logo">
-      <div class="name">
-        <b>Quickfix Financial Services</b>
-        <span>Credit Repair • Credit Building • Education</span>
+  <!-- Top info bar (mobile friendly) -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="pill">📍 <strong>Sunrise, FL</strong> • Mon–Sat <strong>9:00 AM – 7:00 PM</strong></div>
+      <div class="pill">
+        Call: <a href="tel:7869609669"><strong>786-960-9669</strong></a>
+        • Email: <a href="mailto:info@quickfixfinancialservice.com">info@quickfixfinancialservice.com</a>
       </div>
-    </a>
-
-    <nav class="links">
-      <a href="programs.html">Programs</a>
-      <a href="payment.html">Payments</a>
-      <a href="portal.html">Client Portal</a>
-    </nav>
-
-    <div class="cta">
-      <a class="btn ghost" href="tel:18009165008">Call: (800) 916-5008</a>
-      <a class="btn primary" href="programs.html">View Programs</a>
     </div>
   </div>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge">✅ Credit Repair • Real Results</div>
-        <h1 class="h1">Repair.<br/>Real Results.</h1>
-        <p class="lead">
-          Quickfix Financial Services is a professional credit repair company that specializes in powerful dispute strategies
-          designed to challenge inaccurate, outdated, and unverifiable items on your credit reports.
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <a class="brand" href="#">
+        <!-- IMPORTANT: upload your logo as assets/images/logo.png -->
+        <img src="assets/images/logo.png" alt="Quickfix Financial Services Logo" />
+        <div class="name">
+          <b>Quickfix Financial Services</b>
+          <span>Credit Repair • Credit Building • Education</span>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a href="#how">How it Works</a>
+        <a href="#programs">Programs</a>
+        <a href="#trust">Trust</a>
+        <a href="payment.html">Payments</a>
+        <a href="portal.html">Client Portal</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn secondary" href="tel:7869609669">Call Now</a>
+        <a class="btn primary" href="#programs">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <div class="grid hero-card">
+      <div class="hero">
+        <h1>Repair.<br/>Real Results.</h1>
+        <p>
+          Quickfix Financial Services is a professional credit repair company that specializes in
+          powerful dispute strategies designed to challenge inaccurate, outdated, and unverifiable
+          items on your credit reports — so you can qualify for homes, vehicles, funding, and financial freedom.
         </p>
-        <p class="lead">
-          We work with credit bureaus and creditors to help improve your scores, restore your financial standing,
-          and position you for approvals — homes, vehicles, funding, and financial freedom.
-        </p>
+
+        <ul class="hero-bullets">
+          <li><span class="check">✓</span>Three-bureau reports & scores</li>
+          <li><span class="check">✓</span>Credit bureau disputes</li>
+          <li><span class="check">✓</span>One-on-one consultations</li>
+          <li><span class="check">✓</span>Score tracker + updates</li>
+          <li><span class="check">✓</span>24/7 access to client portal</li>
+          <li><span class="check">✓</span>Tradelines / credit builder tool</li>
+        </ul>
 
         <div class="hero-actions">
-          <a class="btn primary" href="programs.html">View Programs</a>
-          <a class="btn" href="portal.html">Client Portal</a>
-          <a class="btn" href="payment.html">Make a Payment</a>
-        </div>
-
-        <div class="notice" style="margin-top:14px">
-          <b>90-Day Money-Back Guarantee*</b> (if you’re not happy with the service).
-          <br/>*Credit repair companies cannot promise specific outcomes or score increases.
+          <a class="btn primary" href="#programs">View Programs</a>
+          <a class="btn secondary" href="portal.html">Client Portal</a>
+          <a class="btn secondary" href="payment.html">Make a Payment</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <!-- Replace these image links anytime; these are clean “luxury” style placeholders -->
-        <div class="hero-img">
-          <img alt="Beautiful home"
-               src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=70">
-        </div>
-        <div class="hero-small">
-          <div class="mini">
-            <img alt="Client holding car keys at dealership"
-                 src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1400&q=70">
-          </div>
-          <div class="mini">
-            <img alt="Happy family"
-                 src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1400&q=70">
-          </div>
+      <!-- HERO IMAGE: dealership keys -->
+      <div class="image-card">
+        <img
+          src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80"
+          alt="Customer receiving car keys"
+          loading="lazy"
+        />
+        <div class="caption">
+          <span><strong>Success Starts Here</strong> — qualify for your next approval</span>
+          <span>✔ Fast • ✔ Clear • ✔ Professional</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>What we do</h2>
+    <!-- Image strip: home + family -->
+    <section>
+      <div class="cards">
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" alt="Beautiful home" loading="lazy">
+          <div style="padding:14px 16px">
+            <h3>Home Approvals</h3>
+            <p>We help correct errors and improve your profile so you’re positioned for mortgage approvals.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1200&q=80" alt="Consultation" loading="lazy">
+          <div style="padding:14px 16px">
+            <h3>One-on-One Guidance</h3>
+            <p>Clear steps, monthly updates, and real communication — no confusion.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3d?auto=format&fit=crop&w=1200&q=80" alt="Happy family" loading="lazy">
+          <div style="padding:14px 16px">
+            <h3>Family Financial Freedom</h3>
+            <p>Better credit = better opportunities. We help you rebuild with a real plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="section-title">
+        <h2>How It Works</h2>
+        <p>Simple process. Premium service. Real progress.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>1) Review</h3>
+          <p>We review your three-bureau report and identify inaccurate, outdated, or unverifiable items.</p>
+        </div>
+        <div class="card">
+          <h3>2) Dispute Strategy</h3>
+          <p>We create a dispute plan and send bureau/creditor challenges, validations, and corrections.</p>
+          <ul>
+            <li>Debt validation letters</li>
+            <li>Cease & desist letters</li>
+            <li>Personal information corrections</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>3) Track Results</h3>
+          <p>You get updates, score tracking, and portal access so you can follow progress 24/7.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs">
+      <div class="section-title">
+        <h2>Programs (One-Time Payment)</h2>
+        <p>Choose the package that matches your goals. Click “Get Started” to enroll and pay securely.</p>
+      </div>
+
+      <div class="program-grid">
+
+        <div class="program">
+          <span class="tag">Starter • Best for basics</span>
+          <h3>Starter Program</h3>
+          <div class="price">$300 <small>one-time</small></div>
+          <ul>
+            <li><span class="check">✓</span>Three-bureau reports & scores</li>
+            <li><span class="check">✓</span>Credit bureau disputes</li>
+            <li><span class="check">✓</span>One-on-one consultation</li>
+            <li><span class="check">✓</span>60-day credit updates</li>
+            <li><span class="check">✓</span>24/7 client portal access</li>
+          </ul>
+          <div class="footer">
+            <a class="btn primary" href="payment.html?plan=starter">Get Started</a>
+            <a class="btn secondary" href="portal.html">Client Portal</a>
+          </div>
+        </div>
+
+        <div class="program featured">
+          <span class="tag">Most Popular • Faster progress</span>
+          <h3>Advanced Program</h3>
+          <div class="price">$500 <small>one-time</small></div>
+          <ul>
+            <li><span class="check">✓</span>Everything in Starter</li>
+            <li><span class="check">✓</span>Creditor interventions</li>
+            <li><span class="check">✓</span>Monthly inquiry disputes</li>
+            <li><span class="check">✓</span>Debt validation letters</li>
+            <li><span class="check">✓</span>Credit builder tool / guidance</li>
+          </ul>
+          <div class="footer">
+            <a class="btn primary" href="payment.html?plan=advanced">Get Started</a>
+            <a class="btn secondary" href="contracts.html">E-Sign Contract</a>
+          </div>
+        </div>
+
+        <div class="program">
+          <span class="tag">Elite • Maximum impact</span>
+          <h3>Elite Program</h3>
+          <div class="price">$800 <small>one-time</small></div>
+          <ul>
+            <li><span class="check">✓</span>Everything in Advanced</li>
+            <li><span class="check">✓</span>Cease & desist letters</li>
+            <li><span class="check">✓</span>Personal info correction letters</li>
+            <li><span class="check">✓</span>45-day credit updates</li>
+            <li><span class="check">✓</span>Tradelines (credit history boost)</li>
+          </ul>
+          <div class="footer">
+            <a class="btn primary" href="payment.html?plan=elite">Get Started</a>
+            <a class="btn secondary" href="tel:7869609669">Talk to Us</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="banner">
+      <h2>90-Day Money-Back Guarantee</h2>
       <p>
-        Our system is powered by modern workflows and AI-assisted review to move fast, stay organized, and keep you updated.
-        We also offer <b>tradelines</b> (when eligible) to help strengthen your credit profile by adding positive history.
+        If you are not satisfied with our service within the first 90 days, you may request a full refund.
+        No pressure. No risk.
       </p>
+      <small>*Credit repair companies cannot promise specific results or a specific score increase.</small>
+    </section>
 
-      <div class="grid3">
-        <div class="card">
-          <div class="icon">⚡</div>
-          <h3>Fast Dispute Strategy</h3>
-          <p>We target inaccurate, outdated, and unverifiable items with bureau + creditor methods.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🧠</div>
-          <h3>AI-Assisted Process</h3>
-          <p>Cleaner tracking, faster organization, and clearer updates — so nothing gets missed.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📈</div>
-          <h3>Credit Building Tools</h3>
-          <p>Score tracking, consultations, and optional tradelines to strengthen your profile.</p>
-        </div>
+    <!-- AI SECTION -->
+    <section class="banner" style="margin-top:18px">
+      <h2>Powered by AI. Backed by Specialists.</h2>
+      <p>
+        Our system uses AI-assisted dispute logic plus real specialists to help accelerate outcomes and keep everything organized.
+        We also offer tradelines to strengthen credit history and overall profile depth.
+      </p>
+    </section>
+
+    <!-- TRUST / REVIEWS -->
+    <section id="trust">
+      <div class="section-title">
+        <h2>Trusted by Clients</h2>
+        <p>Replace names if you want. These are sample reviews until you add real ones.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="trust">
-    <div class="container">
-      <h2>Trusted by clients</h2>
-      <p>Here are sample reviews (replace with your real reviews anytime).</p>
 
       <div class="reviews">
-        <div class="card">
+        <div class="review">
           <div class="stars">★★★★★</div>
-          <div class="quote">“Super clear process and communication. I finally understood what was on my report and what was being challenged.”</div>
-          <div class="person"><div class="avatar"></div><div><b>Jasmine R.</b><div class="small">Sunrise, FL</div></div></div>
+          <p>“Professional, fast, and clear. The portal updates made it easy to track everything.”</p>
+          <b>— Alex R.</b>
         </div>
-        <div class="card">
+        <div class="review">
           <div class="stars">★★★★★</div>
-          <div class="quote">“I needed help fast for a car approval — they guided me step-by-step and kept me updated.”</div>
-          <div class="person"><div class="avatar"></div><div><b>David M.</b><div class="small">Miami, FL</div></div></div>
+          <p>“They explained everything step-by-step and helped clean up old inaccuracies.”</p>
+          <b>— Maria G.</b>
         </div>
-        <div class="card">
+        <div class="review">
           <div class="stars">★★★★★</div>
-          <div class="quote">“Professional and responsive. The portal access made it easy to stay on top of everything.”</div>
-          <div class="person"><div class="avatar"></div><div><b>Nicole T.</b><div class="small">Fort Lauderdale, FL</div></div></div>
+          <p>“Great support and real results. I finally felt like I had a plan.”</p>
+          <b>— James T.</b>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
-
-<footer class="footer">
-  <div class="container cols">
-    <div>
-      <b>Quickfix Financial Services</b>
-      <div class="fine">
-        Call: (800) 916-5008 • Email: info@quickfixfinancialservice.com
-        <br/>Business Hours: Mon–Sat 9:00 AM – 7:00 PM
-        <br/><br/>
-        <b>Disclaimer:</b> Credit repair results vary. We do not guarantee a specific score increase or outcome.
+    <!-- FOOTER -->
+    <footer>
+      <div class="fwrap">
+        <div>
+          <b>Quickfix Financial Services</b><br/>
+          Sunrise, FL • Mon–Sat 9:00 AM – 7:00 PM<br/>
+          Phone: <a href="tel:7869609669">786-960-9669</a> • Email: <a href="mailto:info@quickfixfinancialservice.com">info@quickfixfinancialservice.com</a>
+        </div>
+        <div>
+          <a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a> • <a href="contracts.html">E-Sign</a>
+        </div>
       </div>
-    </div>
-    <div class="fine">
-      <b>Quick Links</b><br/>
-      <a href="programs.html">Programs</a><br/>
-      <a href="payment.html">Payments</a><br/>
-      <a href="portal.html">Client Portal</a><br/>
-    </div>
-  </div>
-</footer>
+    </footer>
 
+  </main>
 </body>
 </html>
