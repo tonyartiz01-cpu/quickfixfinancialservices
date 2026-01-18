@@ -1,87 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Client Portal | Quickfix Financial Services</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-body {
-  font-family: Inter, sans-serif;
-  background:#0f172a;
-  color:white;
-  margin:0;
-}
-
-.container {
-  max-width:500px;
-  margin:auto;
-  padding:80px 20px;
-}
-
-.card {
-  background:#020617;
-  padding:40px;
-  border-radius:16px;
-  box-shadow:0 20px 50px rgba(0,0,0,.6);
-}
-
-h1 {
-  text-align:center;
-  color:#2bb673;
-}
-
-input {
-  width:100%;
-  padding:14px;
-  margin-top:15px;
-  border-radius:8px;
-  border:none;
-}
-
-button {
-  width:100%;
-  margin-top:20px;
-  padding:14px;
-  font-weight:700;
-  border:none;
-  border-radius:10px;
-  background:linear-gradient(135deg,#1f6fb2,#2bb673);
-  color:white;
-}
-
-.note {
-  margin-top:25px;
-  font-size:14px;
-  color:#94a3b8;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Portal | Quickfix Financial Services</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#f6fbff;margin:0;color:#0a1b2e}
+    .wrap{max-width:820px;margin:0 auto;padding:28px 14px}
+    .card{background:#fff;border:1px solid rgba(10,27,46,.12);border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(7,20,39,.10)}
+    .btn{display:inline-block;padding:12px 16px;border-radius:14px;font-weight:800;border:1px solid rgba(10,27,46,.12);text-decoration:none}
+    .primary{background:linear-gradient(90deg,#0b78d1,#22c55e);color:#fff;border:none}
+    .muted{color:rgba(10,27,46,.70)}
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <a href="index.html" class="btn">← Back to Home</a>
 
-<div class="container">
-  <div class="card">
-    <h1>Client Portal Login</h1>
+    <div class="card" style="margin-top:14px">
+      <h1>Client Portal</h1>
+      <p class="muted">
+        Access your updates, documents, and progress tracking.
+      </p>
 
-    <input type="email" placeholder="Email Address">
-    <input type="password" placeholder="Password">
+      <!-- Replace with your real portal URL -->
+      <a class="btn primary" href="https://YOUR-CLIENT-PORTAL.com" target="_blank" rel="noopener">
+        Login to Client Portal
+      </a>
 
-    <button>Login</button>
-
-    <p class="note">
-      Portal access includes:
-      <br>• Credit report updates  
-      <br>• Dispute progress  
-      <br>• Strategy notes  
-      <br>• Secure messaging  
-      <br><br>
-      Don’t have access yet? Contact support to activate your portal.
-    </p>
+      <p class="muted" style="margin-top:14px">
+        Don’t have a login yet? Start here: <a href="payment.html"><b>Enroll & Pay</b></a>
+      </p>
+    </div>
   </div>
-</div>
-
 </body>
 </html>
