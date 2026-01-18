@@ -3,24 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Programs | Quickfix Financial Services</title>
+  <title>Payments | Quickfix Financial Services</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header compact">
     <div class="container header-inner">
-      <a class="brand" href="./">
-        <img class="brand-logo" src="logo.png" alt="Quickfix Financial Services logo">
-      </a>
+      <a class="brand" href="./"><img class="brand-logo" src="logo.png" alt="Quickfix Financial Services logo"></a>
       <nav class="nav">
-        <a href="./#benefits">Benefits</a>
-        <a href="./#how">How it works</a>
-        <a class="active" href="programs.html">Programs</a>
-        <a href="pay.html">Payments</a>
+        <a href="./">Home</a>
+        <a href="programs.html">Programs</a>
+        <a class="active" href="pay.html">Payments</a>
         <a href="portal.html">Client Portal</a>
       </nav>
       <div class="header-cta">
-        <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
         <a class="btn btn-primary" href="enroll.html">Enroll Now</a>
       </div>
       <button class="burger" aria-label="Open menu" onclick="toggleMenu()">
@@ -28,13 +24,11 @@
       </button>
     </div>
     <div id="mobileMenu" class="mobile-menu">
-      <a href="./#benefits" onclick="toggleMenu()">Benefits</a>
-      <a href="./#how" onclick="toggleMenu()">How it works</a>
+      <a href="./" onclick="toggleMenu()">Home</a>
       <a href="programs.html">Programs</a>
       <a href="pay.html">Payments</a>
       <a href="portal.html">Client Portal</a>
       <div class="mobile-cta">
-        <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
         <a class="btn btn-primary" href="enroll.html">Enroll Now</a>
       </div>
     </div>
@@ -42,86 +36,60 @@
 
   <main>
     <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h1 class="page-title">Programs</h1>
-          <p class="muted">One-time payment programs: <strong>$300 / $500 / $800</strong>. Choose your level below.</p>
+      <div class="container two-col">
+        <div class="card">
+          <h1 class="page-title">Make a Payment</h1>
+          <p class="muted">Fast & easy payment via Zelle.</p>
+
+          <div class="pay-box">
+            <div class="pay-label">Send Zelle to:</div>
+            <div class="pay-number" id="zelleNumber">786-960-9669</div>
+
+            <div class="pay-actions">
+              <button class="btn btn-primary" onclick="copyZelle()">Copy Number</button>
+              <a class="btn btn-ghost" href="tel:7869609669">Call Support</a>
+            </div>
+
+            <div id="payToast" class="toast" role="status" aria-live="polite"></div>
+
+            <ol class="pay-steps">
+              <li>Open your bank app and tap <strong>Zelle</strong>.</li>
+              <li>Choose <strong>Send</strong> and paste the number above.</li>
+              <li>Enter your amount (ex: <strong>$300 / $500 / $800</strong>).</li>
+              <li>Put memo: <strong>Quickfix Program + Your Name</strong>.</li>
+            </ol>
+
+            <div class="success">
+              <h3>Congratulations 🎉</h3>
+              <p>
+                You’re taking the next step toward <strong>financial freedom</strong>.
+                After you send payment, tap below to continue enrollment.
+              </p>
+              <a class="btn btn-primary" href="enroll.html">Continue Enrollment</a>
+            </div>
+
+            <p class="fineprint">
+              Zelle availability varies by bank. If you don’t see Zelle, contact your bank or email us for alternatives.
+            </p>
+          </div>
         </div>
 
-        <div class="pricing-grid">
-          <article id="starter" class="plan">
-            <div class="plan-top">
-              <h3>Starter Program</h3>
-              <div class="price">$300 <span>one-time</span></div>
-            </div>
-            <ul class="checklist">
-              <li>Three-bureau reports & scores review</li>
-              <li>Credit bureau disputes</li>
-              <li>Personal information correction letters</li>
-              <li>45–60 day credit updates</li>
-              <li>24/7 client portal access</li>
-              <li>One-on-one consultation</li>
-            </ul>
-            <div class="plan-actions">
-              <a class="btn btn-primary" href="enroll.html#starter">Get Started</a>
-              <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
-            </div>
-          </article>
-
-          <article id="advanced" class="plan featured">
-            <div class="badge">Most Popular</div>
-            <div class="plan-top">
-              <h3>Advanced Program</h3>
-              <div class="price">$500 <span>one-time</span></div>
-            </div>
-            <ul class="checklist">
-              <li>Everything in Starter</li>
-              <li>Creditor interventions</li>
-              <li>Monthly inquiry disputes</li>
-              <li>Debt validation letters</li>
-              <li>Cease and desist letters (as needed)</li>
-              <li>Score tracker guidance</li>
-            </ul>
-            <div class="plan-actions">
-              <a class="btn btn-primary" href="enroll.html#advanced">Get Started</a>
-              <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
-            </div>
-          </article>
-
-          <article id="elite" class="plan">
-            <div class="plan-top">
-              <h3>Elite Program</h3>
-              <div class="price">$800 <span>one-time</span></div>
-            </div>
-            <ul class="checklist">
-              <li>Everything in Advanced</li>
-              <li>Enhanced strategy planning & follow-ups</li>
-              <li>Credit builder tool (optional)</li>
-              <li>Tradeline guidance (optional)</li>
-              <li>Priority check-ins</li>
-              <li>Document support & organization</li>
-            </ul>
-            <div class="plan-actions">
-              <a class="btn btn-primary" href="enroll.html#elite">Get Started</a>
-              <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card mt">
-          <h2>What we help with</h2>
-          <div class="grid-3">
-            <div class="feature compact"><div class="icon">✓</div><h3>Collections</h3><p>Dispute inaccuracies and verify reporting.</p></div>
-            <div class="feature compact"><div class="icon">✓</div><h3>Late payments</h3><p>Challenge errors and build positive patterns.</p></div>
-            <div class="feature compact"><div class="icon">✓</div><h3>Charge-offs</h3><p>Dispute, validate, and correct reporting where applicable.</p></div>
-            <div class="feature compact"><div class="icon">✓</div><h3>Repossessions</h3><p>Review for inaccuracies and outdated items.</p></div>
-            <div class="feature compact"><div class="icon">✓</div><h3>Judgments / liens</h3><p>Help with proper documentation and corrections.</p></div>
-            <div class="feature compact"><div class="icon">✓</div><h3>Personal info</h3><p>Correct addresses, names, employers, and more.</p></div>
+        <div class="card">
+          <h2>Need help?</h2>
+          <p>We’ll walk you through it.</p>
+          <div class="contact-stack">
+            <a class="btn btn-ghost" href="mailto:info@quickfixfinancialservice.com">Email: info@quickfixfinancialservice.com</a>
+            <a class="btn btn-ghost" href="tel:7869609669">Call: (786) 960-9669</a>
           </div>
 
-          <p class="fineprint">
-            Note: Credit repair companies cannot guarantee specific results or score increases. Outcomes vary.
-          </p>
+          <div class="img-card mt">
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=70"
+              alt="Happy family in front of a home"
+              loading="lazy"
+            />
+            <div class="media-caption">Better credit can unlock better opportunities.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -130,8 +98,6 @@
   <footer class="footer simple">
     <div class="container footer-bottom">
       <span>© <span id="year"></span> Quickfix Financial Services.</span>
-      <span class="muted"> | <a href="Quickfix_Privacy_Policy.pdf" target="_blank" rel="noopener">Privacy</a> •
-        <a href="Quickfix_Terms_and_Conditions.pdf" target="_blank" rel="noopener">Terms</a></span>
     </div>
   </footer>
 
