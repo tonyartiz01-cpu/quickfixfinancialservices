@@ -89,67 +89,56 @@ nav a{
   border-radius:18px;
 }
 
-section{
-  padding:70px 25px;
-  max-width:1200px;
-  margin:auto;
-}
+<section class="programs">
+  <h2>Programs (One-Time Payment)</h2>
+  <p class="subtitle">Choose the program that fits your credit goals</p>
 
-.section-title{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:20px;
-}
+  <div class="program-grid">
 
-.section-sub{
-  text-align:center;
-  max-width:800px;
-  margin:0 auto 50px;
-  font-size:18px;
-  opacity:.85;
-}
+    <!-- Starter -->
+    <div class="program-card">
+      <h3>Starter Program</h3>
+      <p class="price">$300 <span>one-time</span></p>
+      <ul>
+        <li>Credit Bureau Disputes</li>
+        <li>One-on-One Consultation</li>
+        <li>Personal Information Corrections</li>
+        <li>60-Day Credit Updates</li>
+        <li>Client Portal Access</li>
+      </ul>
+      <a href="zelle.html" class="btn">Get Started</a>
+    </div>
 
-.grid{
-  display:grid;
-  gap:25px;
-}
+    <!-- Advanced -->
+    <div class="program-card featured">
+      <h3>Advanced Program</h3>
+      <p class="price">$500 <span>one-time</span></p>
+      <ul>
+        <li>Everything in Starter</li>
+        <li>Creditor Interventions</li>
+        <li>Inquiry Disputes</li>
+        <li>Debt Validation Letters</li>
+        <li>AI-Powered Dispute System</li>
+      </ul>
+      <a href="zelle.html" class="btn">Get Started</a>
+    </div>
 
-.grid-3{
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
+    <!-- Elite -->
+    <div class="program-card">
+      <h3>Elite Program</h3>
+      <p class="price">$700 <span>one-time</span></p>
+      <ul>
+        <li>Everything in Advanced</li>
+        <li>Tradeline Assistance</li>
+        <li>Cease & Desist Letters</li>
+        <li>45-Day Credit Updates</li>
+        <li>Priority Support</li>
+      </ul>
+      <a href="zelle.html" class="btn">Get Started</a>
+    </div>
 
-.feature{
-  background:#fff;
-  border-radius:16px;
-  padding:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,.06);
-  font-weight:600;
-}
-
-footer{
-  background:#020617;
-  color:#cbd5f5;
-  padding:40px 25px;
-  text-align:center;
-}
-
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  nav{display:none}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <img src="logo.png" alt="Quickfix Financial Services">
-  <nav>
-    <a href="#program">Programs</a>
-    <a href="#plans">Plans</a>
-    <a href="#portal">Client Portal</a>
-  </nav>
-</header>
+  </div>
+</section>
 
 <section class="hero">
   <div class="hero-inner">
