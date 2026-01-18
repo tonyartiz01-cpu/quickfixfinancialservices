@@ -2,218 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Make a Payment | Quickfix Financial Services</title>
-
-  <style>
-    :root{
-      --blue:#0b5fbf;
-      --blue2:#1a77ff;
-      --green:#22c55e;
-      --text:#0a1b2e;
-      --muted:rgba(10,27,46,.72);
-      --border:rgba(10,27,46,.12);
-      --bg:#f7fbff;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background: radial-gradient(circle at 10% 0%, rgba(26,119,255,.10), transparent 40%),
-                  radial-gradient(circle at 100% 10%, rgba(34,197,94,.12), transparent 40%),
-                  var(--bg);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:980px;margin:0 auto;padding:18px}
-    header{
-      position:sticky;top:0;z-index:10;
-      background:rgba(255,255,255,.92);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:12px 18px;
-      max-width:980px;margin:0 auto;
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:42px;width:auto}
-    .brand b{font-size:14px;letter-spacing:.2px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:11px 14px;border-radius:14px;font-weight:800;
-      border:1px solid var(--border);background:#fff;
-    }
-    .btn.primary{
-      border:none;color:#fff;
-      background: linear-gradient(90deg, var(--blue2), var(--green));
-    }
-    .card{
-      background:rgba(255,255,255,.92);
-      border:1px solid var(--border);
-      border-radius:22px;
-      box-shadow:0 18px 40px rgba(7,20,39,.08);
-      overflow:hidden;
-    }
-    .hero{
-      padding:26px 18px;
-      background: linear-gradient(135deg, rgba(26,119,255,.12), rgba(34,197,94,.10));
-    }
-    .hero h1{
-      margin:0 0 8px 0;
-      font-size:38px;
-      line-height:1.05;
-      letter-spacing:-.7px;
-    }
-    .hero p{margin:0;color:var(--muted);font-size:15px;max-width:60ch}
-    .content{padding:18px}
-    .zelleBox{
-      display:grid;gap:12px;
-      padding:16px;
-      border-radius:18px;
-      background:#fff;
-      border:1px solid rgba(26,119,255,.18);
-    }
-    .label{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.7px}
-    .bigNumber{
-      font-size:28px;font-weight:900;letter-spacing:.5px;
-      padding:12px 14px;border-radius:16px;
-      border:1px dashed rgba(10,27,46,.25);
-      background: rgba(255,255,255,.85);
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      flex-wrap:wrap;
-    }
-    .copyBtn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 12px;border-radius:14px;font-weight:900;
-      border:none;color:#fff;cursor:pointer;
-      background: linear-gradient(90deg, var(--blue2), var(--green));
-      white-space:nowrap;
-    }
-    .steps{
-      display:grid;gap:10px;margin-top:14px;
-    }
-    .step{
-      display:flex;gap:12px;align-items:flex-start;
-      padding:12px 12px;border-radius:16px;
-      border:1px solid rgba(10,27,46,.10);
-      background: rgba(255,255,255,.86);
-    }
-    .dot{
-      width:26px;height:26px;border-radius:999px;
-      background: rgba(34,197,94,.16);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:900;color:var(--green);
-      flex:0 0 auto;
-    }
-    .success{
-      margin-top:16px;
-      padding:16px;
-      border-radius:18px;
-      background: linear-gradient(135deg, rgba(34,197,94,.14), rgba(26,119,255,.10));
-      border:1px solid rgba(34,197,94,.22);
-    }
-    .success h2{margin:0 0 6px 0;font-size:20px}
-    .success p{margin:0;color:var(--muted);font-size:14px}
-    .finePrint{
-      margin-top:14px;
-      font-size:12px;
-      color:rgba(10,27,46,.55);
-      line-height:1.4;
-    }
-    footer{padding:18px;color:rgba(10,27,46,.55);font-size:12px}
-    @media (max-width:520px){
-      .hero h1{font-size:32px}
-      .bigNumber{font-size:22px}
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programs | Quickfix Financial Services</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header>
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <!-- Put your logo file here -->
-        <img src="assets/images/logo.png" alt="Quickfix Financial Services logo">
-        <b>Quickfix Financial Services</b>
+  <header class="header compact">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <img class="brand-logo" src="logo.png" alt="Quickfix Financial Services logo">
       </a>
-      <a class="btn" href="index.html">← Back</a>
+      <nav class="nav">
+        <a href="./#benefits">Benefits</a>
+        <a href="./#how">How it works</a>
+        <a class="active" href="programs.html">Programs</a>
+        <a href="pay.html">Payments</a>
+        <a href="portal.html">Client Portal</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
+        <a class="btn btn-primary" href="enroll.html">Enroll Now</a>
+      </div>
+      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="./#benefits" onclick="toggleMenu()">Benefits</a>
+      <a href="./#how" onclick="toggleMenu()">How it works</a>
+      <a href="programs.html">Programs</a>
+      <a href="pay.html">Payments</a>
+      <a href="portal.html">Client Portal</a>
+      <div class="mobile-cta">
+        <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
+        <a class="btn btn-primary" href="enroll.html">Enroll Now</a>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="card">
-      <div class="hero">
-        <h1>Make a Payment</h1>
-        <p>Pay securely using Zelle. Once you submit your payment, you’re officially taking your next step toward stronger credit and financial freedom.</p>
-      </div>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="page-title">Programs</h1>
+          <p class="muted">One-time payment programs: <strong>$300 / $500 / $800</strong>. Choose your level below.</p>
+        </div>
 
-      <div class="content">
-        <div class="zelleBox">
-          <div class="label">Zelle Phone Number</div>
-
-          <!-- CHANGE THIS NUMBER to your Zelle number -->
-          <div class="bigNumber">
-            <span id="zelleNumber">1 (800) 916-5008</span>
-            <button class="copyBtn" onclick="copyZelle()">Copy Number</button>
-          </div>
-
-          <a class="btn primary" href="tel:18009165008">Call / Text for Help</a>
-
-          <div class="steps">
-            <div class="step">
-              <div class="dot">1</div>
-              <div>
-                <b>Open your banking app</b><br>
-                <span style="color:var(--muted)">Go to <b>Zelle</b> inside your bank app.</span>
-              </div>
+        <div class="pricing-grid">
+          <article id="starter" class="plan">
+            <div class="plan-top">
+              <h3>Starter Program</h3>
+              <div class="price">$300 <span>one-time</span></div>
             </div>
-            <div class="step">
-              <div class="dot">2</div>
-              <div>
-                <b>Send your one-time payment</b><br>
-                <span style="color:var(--muted)">Send to the number above and include your <b>full name</b> in the memo.</span>
-              </div>
+            <ul class="checklist">
+              <li>Three-bureau reports & scores review</li>
+              <li>Credit bureau disputes</li>
+              <li>Personal information correction letters</li>
+              <li>45–60 day credit updates</li>
+              <li>24/7 client portal access</li>
+              <li>One-on-one consultation</li>
+            </ul>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="enroll.html#starter">Get Started</a>
+              <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
             </div>
-            <div class="step">
-              <div class="dot">3</div>
-              <div>
-                <b>Text your confirmation</b><br>
-                <span style="color:var(--muted)">After payment, text a screenshot to confirm enrollment.</span>
-              </div>
+          </article>
+
+          <article id="advanced" class="plan featured">
+            <div class="badge">Most Popular</div>
+            <div class="plan-top">
+              <h3>Advanced Program</h3>
+              <div class="price">$500 <span>one-time</span></div>
             </div>
+            <ul class="checklist">
+              <li>Everything in Starter</li>
+              <li>Creditor interventions</li>
+              <li>Monthly inquiry disputes</li>
+              <li>Debt validation letters</li>
+              <li>Cease and desist letters (as needed)</li>
+              <li>Score tracker guidance</li>
+            </ul>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="enroll.html#advanced">Get Started</a>
+              <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
+            </div>
+          </article>
+
+          <article id="elite" class="plan">
+            <div class="plan-top">
+              <h3>Elite Program</h3>
+              <div class="price">$800 <span>one-time</span></div>
+            </div>
+            <ul class="checklist">
+              <li>Everything in Advanced</li>
+              <li>Enhanced strategy planning & follow-ups</li>
+              <li>Credit builder tool (optional)</li>
+              <li>Tradeline guidance (optional)</li>
+              <li>Priority check-ins</li>
+              <li>Document support & organization</li>
+            </ul>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="enroll.html#elite">Get Started</a>
+              <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="card mt">
+          <h2>What we help with</h2>
+          <div class="grid-3">
+            <div class="feature compact"><div class="icon">✓</div><h3>Collections</h3><p>Dispute inaccuracies and verify reporting.</p></div>
+            <div class="feature compact"><div class="icon">✓</div><h3>Late payments</h3><p>Challenge errors and build positive patterns.</p></div>
+            <div class="feature compact"><div class="icon">✓</div><h3>Charge-offs</h3><p>Dispute, validate, and correct reporting where applicable.</p></div>
+            <div class="feature compact"><div class="icon">✓</div><h3>Repossessions</h3><p>Review for inaccuracies and outdated items.</p></div>
+            <div class="feature compact"><div class="icon">✓</div><h3>Judgments / liens</h3><p>Help with proper documentation and corrections.</p></div>
+            <div class="feature compact"><div class="icon">✓</div><h3>Personal info</h3><p>Correct addresses, names, employers, and more.</p></div>
           </div>
 
-          <div class="success">
-            <h2>Congratulations 🎉</h2>
-            <p>You’ve taken the next step toward <b>financial freedom</b>. Once we confirm your payment, we’ll send your onboarding instructions and start your program.</p>
-          </div>
-
-          <div class="finePrint">
-            Note: Zelle does not support a universal “auto-fill payment” link on every phone. This page makes it fast by providing a copy button and clear steps.
-          </div>
+          <p class="fineprint">
+            Note: Credit repair companies cannot guarantee specific results or score increases. Outcomes vary.
+          </p>
         </div>
       </div>
-
-      <footer>
-        © <span id="year"></span> Quickfix Financial Services • Credit Repair & Credit Building
-      </footer>
-    </div>
+    </section>
   </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <footer class="footer simple">
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Quickfix Financial Services.</span>
+      <span class="muted"> | <a href="Quickfix_Privacy_Policy.pdf" target="_blank" rel="noopener">Privacy</a> •
+        <a href="Quickfix_Terms_and_Conditions.pdf" target="_blank" rel="noopener">Terms</a></span>
+    </div>
+  </footer>
 
-    function copyZelle(){
-      const num = document.getElementById('zelleNumber').textContent.trim();
-      navigator.clipboard.writeText(num).then(() => {
-        alert("Copied: " + num + "\\n\\nOpen your bank app → Zelle → paste the number.");
-      }).catch(() => {
-        // fallback if clipboard blocked
-        prompt("Copy this number:", num);
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
