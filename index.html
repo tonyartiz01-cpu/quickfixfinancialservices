@@ -1,203 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quickfix Financial Services | Credit Repair Experts</title>
-
-<style>
-:root{
-  --blue:#1f6fd2;
-  --green:#2bb673;
-  --dark:#0f172a;
-  --light:#f8fafc;
-}
-
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-
-body{
-  margin:0;
-  background:var(--light);
-  color:var(--dark);
-}
-
-header{
-  background:#fff;
-  padding:15px 25px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  box-shadow:0 4px 12px rgba(0,0,0,.06);
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-
-header img{height:50px}
-
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:var(--dark);
-  font-weight:600;
-}
-
-.btn{
-  padding:14px 24px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  display:inline-block;
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,var(--blue),var(--green));
-  color:#fff;
-}
-
-.btn-outline{
-  border:2px solid var(--blue);
-  color:var(--blue);
-}
-
-.hero{
-  padding:80px 25px;
-  background:linear-gradient(135deg,#eaf4ff,#e9fff5);
-}
-
-.hero-inner{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-
-.hero h1{
-  font-size:44px;
-  margin-bottom:15px;
-}
-
-.hero p{
-  font-size:18px;
-  line-height:1.6;
-}
-
-.hero img{
-  width:100%;
-  border-radius:18px;
-}
-
-section{
-  padding:70px 25px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.section-title{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:20px;
-}
-
-.section-sub{
-  text-align:center;
-  max-width:800px;
-  margin:0 auto 50px;
-  font-size:18px;
-  opacity:.85;
-}
-
-.grid{
-  display:grid;
-  gap:25px;
-}
-
-.grid-3{
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
-
-.feature{
-  background:#fff;
-  border-radius:16px;
-  padding:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,.06);
-  font-weight:600;
-}
-
-footer{
-  background:#020617;
-  color:#cbd5f5;
-  padding:40px 25px;
-  text-align:center;
-}
-
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  nav{display:none}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quickfix Financial Services | Credit Repair</title>
+  <meta name="description" content="Quickfix Financial Services — credit repair, disputes, consulting, and credit building tools." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<header>
-  <img src="logo.png" alt="Quickfix Financial Services">
-  <nav>
-    <a href="#program">Programs</a>
-    <a href="#plans">Plans</a>
-    <a href="#portal">Client Portal</a>
-  </nav>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="Quickfix Financial Services logo">
+      <div class="name">
+        <b>Quickfix Financial Services</b>
+        <span>Credit Repair • Credit Building • Education</span>
+      </div>
+    </a>
+
+    <nav class="links">
+      <a href="programs.html">Programs</a>
+      <a href="payment.html">Payments</a>
+      <a href="portal.html">Client Portal</a>
+    </nav>
+
+    <div class="cta">
+      <a class="btn ghost" href="tel:18009165008">Call: (800) 916-5008</a>
+      <a class="btn primary" href="programs.html">View Programs</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Powerful Credit Repair.<br>Real Results.</h1>
-      <p>
-        Quickfix Financial Services is a professional credit repair company that
-        specializes in powerful dispute strategies designed to challenge inaccurate,
-        outdated, and unverifiable items on your credit reports.
-      </p>
-      <p>
-        We work directly with credit bureaus and creditors to help improve your scores,
-        restore your financial standing, and position you for approvals.
-      </p>
-      <br>
-      <a href="#program" class="btn btn-primary">View Our Program</a>
-      <a href="#portal" class="btn btn-outline">Client Portal</a>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">✅ Credit Repair • Real Results</div>
+        <h1 class="h1">Repair.<br/>Real Results.</h1>
+        <p class="lead">
+          Quickfix Financial Services is a professional credit repair company that specializes in powerful dispute strategies
+          designed to challenge inaccurate, outdated, and unverifiable items on your credit reports.
+        </p>
+        <p class="lead">
+          We work with credit bureaus and creditors to help improve your scores, restore your financial standing,
+          and position you for approvals — homes, vehicles, funding, and financial freedom.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="programs.html">View Programs</a>
+          <a class="btn" href="portal.html">Client Portal</a>
+          <a class="btn" href="payment.html">Make a Payment</a>
+        </div>
+
+        <div class="notice" style="margin-top:14px">
+          <b>90-Day Money-Back Guarantee*</b> (if you’re not happy with the service).
+          <br/>*Credit repair companies cannot promise specific outcomes or score increases.
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <!-- Replace these image links anytime; these are clean “luxury” style placeholders -->
+        <div class="hero-img">
+          <img alt="Beautiful home"
+               src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=70">
+        </div>
+        <div class="hero-small">
+          <div class="mini">
+            <img alt="Client holding car keys at dealership"
+                 src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1400&q=70">
+          </div>
+          <div class="mini">
+            <img alt="Happy family"
+                 src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1400&q=70">
+          </div>
+        </div>
+      </div>
     </div>
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="New Home">
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>What we do</h2>
+      <p>
+        Our system is powered by modern workflows and AI-assisted review to move fast, stay organized, and keep you updated.
+        We also offer <b>tradelines</b> (when eligible) to help strengthen your credit profile by adding positive history.
+      </p>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Fast Dispute Strategy</h3>
+          <p>We target inaccurate, outdated, and unverifiable items with bureau + creditor methods.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>AI-Assisted Process</h3>
+          <p>Cleaner tracking, faster organization, and clearer updates — so nothing gets missed.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>Credit Building Tools</h3>
+          <p>Score tracking, consultations, and optional tradelines to strengthen your profile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trust">
+    <div class="container">
+      <h2>Trusted by clients</h2>
+      <p>Here are sample reviews (replace with your real reviews anytime).</p>
+
+      <div class="reviews">
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <div class="quote">“Super clear process and communication. I finally understood what was on my report and what was being challenged.”</div>
+          <div class="person"><div class="avatar"></div><div><b>Jasmine R.</b><div class="small">Sunrise, FL</div></div></div>
+        </div>
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <div class="quote">“I needed help fast for a car approval — they guided me step-by-step and kept me updated.”</div>
+          <div class="person"><div class="avatar"></div><div><b>David M.</b><div class="small">Miami, FL</div></div></div>
+        </div>
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <div class="quote">“Professional and responsive. The portal access made it easy to stay on top of everything.”</div>
+          <div class="person"><div class="avatar"></div><div><b>Nicole T.</b><div class="small">Fort Lauderdale, FL</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container cols">
+    <div>
+      <b>Quickfix Financial Services</b>
+      <div class="fine">
+        Call: (800) 916-5008 • Email: info@quickfixfinancialservice.com
+        <br/>Business Hours: Mon–Sat 9:00 AM – 7:00 PM
+        <br/><br/>
+        <b>Disclaimer:</b> Credit repair results vary. We do not guarantee a specific score increase or outcome.
+      </div>
+    </div>
+    <div class="fine">
+      <b>Quick Links</b><br/>
+      <a href="programs.html">Programs</a><br/>
+      <a href="payment.html">Payments</a><br/>
+      <a href="portal.html">Client Portal</a><br/>
+    </div>
   </div>
-</section>
-
-<section id="program">
-  <h2 class="section-title">What Our Credit Repair Program Includes</h2>
-  <p class="section-sub">
-    Our comprehensive program is designed to address every major factor impacting
-    your credit profile — strategically, legally, and transparently.
-  </p>
-
-  <div class="grid grid-3">
-    <div class="feature">✔ Three-Bureau Reports & Scores</div>
-    <div class="feature">✔ Credit Bureau Disputes</div>
-    <div class="feature">✔ One-on-One Consultations</div>
-    <div class="feature">✔ Score Tracker</div>
-    <div class="feature">✔ 24/7 Client Portal Access</div>
-    <div class="feature">✔ Creditor Interventions</div>
-    <div class="feature">✔ Monthly Inquiry Disputes</div>
-    <div class="feature">✔ Debt Validation Letters</div>
-    <div class="feature">✔ Cease & Desist Letters</div>
-    <div class="feature">✔ Personal Info Corrections</div>
-    <div class="feature">✔ 45-Day Credit Updates</div>
-    <div class="feature">✔ Credit Builder Tools</div>
-  </div>
-</section>
-
-<footer>
-  <p>📞 1-800-916-5008 | ✉ info@quickfixfinancialservice.com</p>
-  <p>© Quickfix Financial Services</p>
 </footer>
 
 </body>
