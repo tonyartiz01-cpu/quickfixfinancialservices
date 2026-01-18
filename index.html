@@ -1,141 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quickfix Financial Services | Credit Repair</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quickfix Financial Services | Credit Repair Experts</title>
 
 <style>
-:root {
+:root{
   --blue:#1f6fd2;
   --green:#2bb673;
   --dark:#0f172a;
   --light:#f8fafc;
 }
 
-* { box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; }
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
-body {
+body{
   margin:0;
   background:var(--light);
   color:var(--dark);
 }
 
-header {
+header{
   background:#fff;
   padding:15px 25px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
   position:sticky;
   top:0;
   z-index:100;
 }
 
-header img {
-  height:50px;
-}
+header img{height:50px}
 
-nav a {
+nav a{
   margin-left:20px;
   text-decoration:none;
   color:var(--dark);
   font-weight:600;
 }
 
-.btn {
-  padding:12px 20px;
-  border-radius:8px;
+.btn{
+  padding:14px 24px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:bold;
   display:inline-block;
 }
 
-.btn-primary {
+.btn-primary{
   background:linear-gradient(135deg,var(--blue),var(--green));
   color:#fff;
 }
 
-.btn-outline {
+.btn-outline{
   border:2px solid var(--blue);
   color:var(--blue);
 }
 
-.hero {
-  padding:70px 25px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+.hero{
+  padding:80px 25px;
   background:linear-gradient(135deg,#eaf4ff,#e9fff5);
 }
 
-.hero h1 {
-  font-size:42px;
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:44px;
   margin-bottom:15px;
 }
 
-.hero p {
+.hero p{
   font-size:18px;
   line-height:1.6;
 }
 
-.hero img {
+.hero img{
   width:100%;
-  border-radius:16px;
+  border-radius:18px;
 }
 
-section {
+section{
   padding:70px 25px;
   max-width:1200px;
   margin:auto;
 }
 
-.section-title {
+.section-title{
   text-align:center;
   font-size:34px;
-  margin-bottom:50px;
+  margin-bottom:20px;
 }
 
-.grid {
+.section-sub{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 50px;
+  font-size:18px;
+  opacity:.85;
+}
+
+.grid{
   display:grid;
-  gap:30px;
+  gap:25px;
 }
 
-.grid-3 { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
 
-.card {
+.feature{
   background:#fff;
   border-radius:16px;
-  padding:30px;
+  padding:25px;
   box-shadow:0 10px 25px rgba(0,0,0,.06);
+  font-weight:600;
 }
 
-.card img {
-  width:100%;
-  border-radius:14px;
-  margin-bottom:15px;
-}
-
-.price {
-  font-size:42px;
-  color:var(--blue);
-  font-weight:bold;
-}
-
-ul { padding-left:20px; }
-
-.trust {
-  background:#0f172a;
-  color:#fff;
-  border-radius:20px;
-  padding:60px 25px;
-}
-
-.trust p { opacity:.9; }
-
-footer {
+footer{
   background:#020617;
   color:#cbd5f5;
   padding:40px 25px;
@@ -143,131 +134,64 @@ footer {
 }
 
 @media(max-width:900px){
-  .hero { grid-template-columns:1fr; }
-  header nav { display:none; }
+  .hero-inner{grid-template-columns:1fr}
+  nav{display:none}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="logo.png" alt="Quickfix Financial Services">
   <nav>
+    <a href="#program">Programs</a>
     <a href="#plans">Plans</a>
-    <a href="#payments">Payments</a>
     <a href="#portal">Client Portal</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Restore Your Credit.<br>Build Your Financial Future.</h1>
-    <p>
-      Quickfix Financial Services helps individuals and families repair their credit,
-      remove inaccurate negative items, and position themselves to qualify for
-      vehicles, homes, funding, and long-term financial freedom.
-    </p>
-    <br>
-    <a href="#plans" class="btn btn-primary">View Plans</a>
-    <a href="#payments" class="btn btn-outline">Make a Payment</a>
-  </div>
-  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="Luxury Home">
-</section>
-
-<!-- SUCCESS IMAGES -->
-<section>
-  <h2 class="section-title">Success Starts Here</h2>
-  <div class="grid grid-3">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588" alt="Car Dealership">
-      <h3>Vehicle Approval</h3>
-      <p>Clients qualifying for vehicles after credit restoration.</p>
+  <div class="hero-inner">
+    <div>
+      <h1>Powerful Credit Repair.<br>Real Results.</h1>
+      <p>
+        Quickfix Financial Services is a professional credit repair company that
+        specializes in powerful dispute strategies designed to challenge inaccurate,
+        outdated, and unverifiable items on your credit reports.
+      </p>
+      <p>
+        We work directly with credit bureaus and creditors to help improve your scores,
+        restore your financial standing, and position you for approvals.
+      </p>
+      <br>
+      <a href="#program" class="btn btn-primary">View Our Program</a>
+      <a href="#portal" class="btn btn-outline">Client Portal</a>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="New Home">
-      <h3>Home Ownership</h3>
-      <p>Helping families move into homes they once thought were impossible.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Happy Family">
-      <h3>Family Security</h3>
-      <p>Building generational credit and financial confidence.</p>
-    </div>
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="New Home">
   </div>
 </section>
 
-<!-- PLANS -->
-<section id="plans">
-  <h2 class="section-title">Credit Repair Plans</h2>
-  <div class="grid grid-3">
-    <div class="card">
-      <h3>Credit Builder Plan</h3>
-      <p class="price">$400</p>
-      <ul>
-        <li>Authorized User Tradeline</li>
-        <li>Unsecured Credit Setup</li>
-        <li>Credit Monitoring</li>
-        <li>Consultation Call</li>
-      </ul>
-      <a class="btn btn-primary">Get Started</a>
-    </div>
-
-    <div class="card">
-      <h3>Premium Plan</h3>
-      <p class="price">$600</p>
-      <ul>
-        <li>Negative Item Disputes</li>
-        <li>1 High-Limit Tradeline</li>
-        <li>Client Portal Access</li>
-        <li>24/7 Support</li>
-      </ul>
-      <a class="btn btn-primary">Get Started</a>
-    </div>
-
-    <div class="card">
-      <h3>Premium Plus Plan</h3>
-      <p class="price">$800</p>
-      <ul>
-        <li>Multiple Dispute Rounds</li>
-        <li>2 High-Limit Tradelines</li>
-        <li>Inquiry Removal</li>
-        <li>Monthly Progress Calls</li>
-      </ul>
-      <a class="btn btn-primary">Get Started</a>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-  <h2 class="section-title">Trusted By Our Clients</h2>
-  <p>⭐⭐⭐⭐⭐ “Quickfix helped me buy my first home in under a year.”</p>
-  <p>⭐⭐⭐⭐⭐ “Professional, transparent, and results-driven.”</p>
-  <p>⭐⭐⭐⭐⭐ “Best credit decision I’ve ever made.”</p>
-</section>
-
-<!-- PAYMENTS -->
-<section id="payments">
-  <h2 class="section-title">Payments</h2>
-  <p style="text-align:center;">
-    Secure payments available via Zelle, Cash App, or invoice.
+<section id="program">
+  <h2 class="section-title">What Our Credit Repair Program Includes</h2>
+  <p class="section-sub">
+    Our comprehensive program is designed to address every major factor impacting
+    your credit profile — strategically, legally, and transparently.
   </p>
-  <div style="text-align:center;">
-    <a class="btn btn-primary">Make a Payment</a>
-  </div>
-</section>
 
-<!-- PORTAL -->
-<section id="portal">
-  <h2 class="section-title">Client Portal</h2>
-  <p style="text-align:center;">
-    Existing clients can log in to track disputes, documents, and progress.
-  </p>
-  <div style="text-align:center;">
-    <a class="btn btn-outline">Client Login</a>
+  <div class="grid grid-3">
+    <div class="feature">✔ Three-Bureau Reports & Scores</div>
+    <div class="feature">✔ Credit Bureau Disputes</div>
+    <div class="feature">✔ One-on-One Consultations</div>
+    <div class="feature">✔ Score Tracker</div>
+    <div class="feature">✔ 24/7 Client Portal Access</div>
+    <div class="feature">✔ Creditor Interventions</div>
+    <div class="feature">✔ Monthly Inquiry Disputes</div>
+    <div class="feature">✔ Debt Validation Letters</div>
+    <div class="feature">✔ Cease & Desist Letters</div>
+    <div class="feature">✔ Personal Info Corrections</div>
+    <div class="feature">✔ 45-Day Credit Updates</div>
+    <div class="feature">✔ Credit Builder Tools</div>
   </div>
 </section>
 
