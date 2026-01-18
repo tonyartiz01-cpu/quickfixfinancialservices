@@ -1,384 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Quickfix Financial Services | Credit Repair & Credit Building</title>
-  <meta name="description" content="Quickfix Financial Services helps dispute inaccurate items, improve credit habits, and guide you with a clear plan toward stronger credit." />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quickfix Financial Services | Credit Repair Experts</title>
+
+<style>
+:root{
+  --blue:#1f6fd2;
+  --green:#2bb673;
+  --dark:#0f172a;
+  --light:#f8fafc;
+}
+
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+
+body{
+  margin:0;
+  background:var(--light);
+  color:var(--dark);
+}
+
+header{
+  background:#fff;
+  padding:15px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+header img{height:50px}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+}
+
+.btn{
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue),var(--green));
+  color:#fff;
+}
+
+.btn-outline{
+  border:2px solid var(--blue);
+  color:var(--blue);
+}
+
+.hero{
+  padding:80px 25px;
+  background:linear-gradient(135deg,#eaf4ff,#e9fff5);
+}
+
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:44px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.hero img{
+  width:100%;
+  border-radius:18px;
+}
+
+section{
+  padding:70px 25px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+.section-sub{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 50px;
+  font-size:18px;
+  opacity:.85;
+}
+
+.grid{
+  display:grid;
+  gap:25px;
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.feature{
+  background:#fff;
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  font-weight:600;
+}
+
+footer{
+  background:#020617;
+  color:#cbd5f5;
+  padding:40px 25px;
+  text-align:center;
+}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  nav{display:none}
+}
+</style>
 </head>
+
 <body>
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span class="dot"></span>
-        <span><strong>Sunrise, FL</strong></span>
-        <span class="sep">•</span>
-        <span>Mon–Sat <strong>9:00 AM – 7:00 PM</strong></span>
-      </div>
-      <div class="topbar-right">
-        <a class="toplink" href="tel:7869609669">Call: <strong>(786) 960-9669</strong></a>
-        <span class="sep">•</span>
-        <a class="toplink" href="mailto:info@quickfixfinancialservice.com">Email: <strong>info@quickfixfinancialservice.com</strong></a>
-      </div>
+
+<header>
+  <img src="logo.png" alt="Quickfix Financial Services">
+  <nav>
+    <a href="#program">Programs</a>
+    <a href="#plans">Plans</a>
+    <a href="#portal">Client Portal</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Powerful Credit Repair.<br>Real Results.</h1>
+      <p>
+        Quickfix Financial Services is a professional credit repair company that
+        specializes in powerful dispute strategies designed to challenge inaccurate,
+        outdated, and unverifiable items on your credit reports.
+      </p>
+      <p>
+        We work directly with credit bureaus and creditors to help improve your scores,
+        restore your financial standing, and position you for approvals.
+      </p>
+      <br>
+      <a href="#program" class="btn btn-primary">View Our Program</a>
+      <a href="#portal" class="btn btn-outline">Client Portal</a>
     </div>
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="New Home">
   </div>
+</section>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="./">
-        <img class="brand-logo" src="logo.png" alt="Quickfix Financial Services logo" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='inline-flex'">
-        <span id="logoFallback" class="brand-fallback" style="display:none;">
-          <span class="mark"></span>
-          <span class="brand-text">
-            <span class="brand-name">Quickfix Financial Services</span>
-            <span class="brand-sub">Credit Repair • Credit Building</span>
-          </span>
-        </span>
-      </a>
+<section id="program">
+  <h2 class="section-title">What Our Credit Repair Program Includes</h2>
+  <p class="section-sub">
+    Our comprehensive program is designed to address every major factor impacting
+    your credit profile — strategically, legally, and transparently.
+  </p>
 
-      <nav class="nav">
-        <a href="#benefits">Benefits</a>
-        <a href="#how">How it works</a>
-        <a href="programs.html">Programs</a>
-        <a href="pay.html">Payments</a>
-        <a href="portal.html">Client Portal</a>
-      </nav>
+  <div class="grid grid-3">
+    <div class="feature">✔ Three-Bureau Reports & Scores</div>
+    <div class="feature">✔ Credit Bureau Disputes</div>
+    <div class="feature">✔ One-on-One Consultations</div>
+    <div class="feature">✔ Score Tracker</div>
+    <div class="feature">✔ 24/7 Client Portal Access</div>
+    <div class="feature">✔ Creditor Interventions</div>
+    <div class="feature">✔ Monthly Inquiry Disputes</div>
+    <div class="feature">✔ Debt Validation Letters</div>
+    <div class="feature">✔ Cease & Desist Letters</div>
+    <div class="feature">✔ Personal Info Corrections</div>
+    <div class="feature">✔ 45-Day Credit Updates</div>
+    <div class="feature">✔ Credit Builder Tools</div>
+  </div>
+</section>
 
-      <div class="header-cta">
-        <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
-        <a class="btn btn-primary" href="programs.html">View Programs</a>
-      </div>
+<footer>
+  <p>📞 1-800-916-5008 | ✉ info@quickfixfinancialservice.com</p>
+  <p>© Quickfix Financial Services</p>
+</footer>
 
-      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="mobile-menu">
-      <a href="#benefits" onclick="toggleMenu()">Benefits</a>
-      <a href="#how" onclick="toggleMenu()">How it works</a>
-      <a href="programs.html">Programs</a>
-      <a href="pay.html">Payments</a>
-      <a href="portal.html">Client Portal</a>
-      <div class="mobile-cta">
-        <a class="btn btn-ghost" href="pay.html">Make a Payment</a>
-        <a class="btn btn-primary" href="programs.html">View Programs</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="pill">Credit Repair • Real Results</div>
-          <h1>Repair.<br/>Real Results.</h1>
-          <p class="lead">
-            Quickfix Financial Services is a professional credit repair company specializing in powerful dispute strategies
-            designed to challenge inaccurate, outdated, and unverifiable items on your credit reports.
-          </p>
-          <p class="lead muted">
-            We work directly with credit bureaus and creditors to help improve your scores, restore your financial standing,
-            and position you for approvals.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="programs.html">View Our Program</a>
-            <a class="btn btn-ghost" href="portal.html">Client Portal</a>
-          </div>
-
-          <div class="trust-row" aria-label="Trust indicators">
-            <div class="trust-card">
-              <div class="trust-num">4.9</div>
-              <div class="trust-meta">Client rating <span class="stars">★★★★★</span></div>
-            </div>
-            <div class="trust-card">
-              <div class="trust-num">90-Day</div>
-              <div class="trust-meta">Money-back guarantee*</div>
-            </div>
-            <div class="trust-card">
-              <div class="trust-num">AI</div>
-              <div class="trust-meta">Powered support workflows</div>
-            </div>
-          </div>
-
-          <p class="fineprint">
-            *Credit repair companies cannot promise specific results or score increases. Guarantee applies per terms on enroll page.
-          </p>
-        </div>
-
-        <div class="hero-media">
-          <!-- Premium “result” images (royalty-free placeholders via Unsplash) -->
-          <div class="media-card">
-            <img
-              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=70"
-              alt="Beautiful modern home"
-              loading="lazy"
-            />
-            <div class="media-caption">Home approvals start with stronger credit.</div>
-          </div>
-          <div class="media-mini">
-            <div class="mini">
-              <img
-                src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=70"
-                alt="New car at a dealership"
-                loading="lazy"
-              />
-              <div class="mini-cap">Auto approvals • Better terms</div>
-            </div>
-            <div class="mini">
-              <img
-                src="https://images.unsplash.com/photo-1520975958225-73f4ad0f8a5a?auto=format&fit=crop&w=1200&q=70"
-                alt="Family celebrating at home"
-                loading="lazy"
-              />
-              <div class="mini-cap">Family financial freedom</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefits -->
-    <section id="benefits" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>What you get</h2>
-          <p class="muted">A clear, step-by-step program designed to dispute issues and build a stronger credit profile.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="feature">
-            <div class="icon">✓</div>
-            <h3>Three-bureau reports & scores</h3>
-            <p>Understand where you stand and what’s holding your score back.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">✓</div>
-            <h3>Credit bureau disputes</h3>
-            <p>Dispute inaccurate, outdated, and unverifiable items with proven workflows.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">✓</div>
-            <h3>One-on-one consultations</h3>
-            <p>Guidance, next steps, and a clear plan for approvals.</p>
-          </div>
-
-          <div class="feature">
-            <div class="icon">✓</div>
-            <h3>Score tracker</h3>
-            <p>Track changes over time and stay on top of progress.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">✓</div>
-            <h3>24/7 client portal access</h3>
-            <p>Access updates, documents, and next steps anytime.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">✓</div>
-            <h3>Credit builder tools</h3>
-            <p>Optional tools including tradelines (when appropriate) to strengthen profile history.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p class="muted">Simple process. Premium experience.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <h3>Enroll & upload</h3>
-              <p>Choose a program, complete enrollment, and upload your documents securely.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <h3>Dispute strategy</h3>
-              <p>We build a dispute plan: bureau disputes, creditor interventions, and correction letters where needed.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <h3>Track progress</h3>
-              <p>Receive updates and guidance. We aim for a clear, clean, stronger profile over time.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-banner">
-          <div>
-            <h3>Ready to start?</h3>
-            <p class="muted">One-time programs: $300 / $500 / $800</p>
-          </div>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="programs.html">See Programs</a>
-            <a class="btn btn-ghost" href="enroll.html">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Programs preview -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Programs (one-time payment)</h2>
-          <p class="muted">Pick the level that matches your goals.</p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="plan">
-            <div class="plan-top">
-              <h3>Starter</h3>
-              <div class="price">$300 <span>one-time</span></div>
-            </div>
-            <ul class="checklist">
-              <li>Three-bureau review</li>
-              <li>Credit bureau disputes</li>
-              <li>Personal info correction letters</li>
-              <li>45–60 day updates</li>
-              <li>Client portal access</li>
-            </ul>
-            <div class="plan-actions">
-              <a class="btn btn-primary" href="enroll.html#starter">Get Started</a>
-              <a class="btn btn-ghost" href="programs.html#starter">Details</a>
-            </div>
-          </article>
-
-          <article class="plan featured">
-            <div class="badge">Most Popular</div>
-            <div class="plan-top">
-              <h3>Advanced</h3>
-              <div class="price">$500 <span>one-time</span></div>
-            </div>
-            <ul class="checklist">
-              <li>Everything in Starter</li>
-              <li>Creditor interventions</li>
-              <li>Debt validation letters</li>
-              <li>Monthly inquiry disputes</li>
-              <li>Priority support</li>
-            </ul>
-            <div class="plan-actions">
-              <a class="btn btn-primary" href="enroll.html#advanced">Get Started</a>
-              <a class="btn btn-ghost" href="programs.html#advanced">Details</a>
-            </div>
-          </article>
-
-          <article class="plan">
-            <div class="plan-top">
-              <h3>Elite</h3>
-              <div class="price">$800 <span>one-time</span></div>
-            </div>
-            <ul class="checklist">
-              <li>Everything in Advanced</li>
-              <li>Cease & desist letters</li>
-              <li>Enhanced strategy planning</li>
-              <li>Tradeline guidance (optional)</li>
-              <li>Top-tier support & check-ins</li>
-            </ul>
-            <div class="plan-actions">
-              <a class="btn btn-primary" href="enroll.html#elite">Get Started</a>
-              <a class="btn btn-ghost" href="programs.html#elite">Details</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Guarantee + Reviews -->
-    <section class="section alt">
-      <div class="container two-col">
-        <div class="card">
-          <h2>90-Day Money-Back Guarantee*</h2>
-          <p>
-            If you’re not satisfied with the service within the first 90 days, you may request a refund in accordance with the
-            terms in your agreement.
-          </p>
-          <p class="fineprint">*No one can promise a specific credit score increase. Credit outcomes vary by profile and history.</p>
-          <a class="btn btn-ghost" href="enroll.html#guarantee">Read the guarantee terms</a>
-        </div>
-
-        <div class="card">
-          <h2>Trusted by clients</h2>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“They explained everything clearly and helped me understand what was hurting my report.”</p>
-            <div class="reviewer">— Alex R.</div>
-          </div>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“The portal updates were super helpful. I finally felt like I had a real plan.”</p>
-            <div class="reviewer">— Maria G.</div>
-          </div>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Fast communication and professional. I recommend if you want structure and guidance.”</p>
-            <div class="reviewer">— James T.</div>
-          </div>
-          <a class="btn btn-primary" href="enroll.html">Enroll Now</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="footer-brand">
-            <span class="mark"></span>
-            <div>
-              <strong>Quickfix Financial Services</strong><br/>
-              <span class="muted">Credit Repair • Credit Building</span>
-            </div>
-          </div>
-          <p class="muted">Sunrise, FL • Mon–Sat 9:00 AM – 7:00 PM</p>
-          <p class="muted">
-            <a href="tel:7869609669">(786) 960-9669</a> •
-            <a href="mailto:info@quickfixfinancialservice.com">info@quickfixfinancialservice.com</a>
-          </p>
-        </div>
-
-        <div>
-          <strong>Links</strong>
-          <div class="footer-links">
-            <a href="programs.html">Programs</a>
-            <a href="pay.html">Payments</a>
-            <a href="portal.html">Client Portal</a>
-            <a href="enroll.html">Enroll Now</a>
-          </div>
-        </div>
-
-        <div>
-          <strong>Legal</strong>
-          <div class="footer-links">
-            <a href="Quickfix_Terms_and_Conditions.pdf" target="_blank" rel="noopener">Terms & Conditions (PDF)</a>
-            <a href="Quickfix_Privacy_Policy.pdf" target="_blank" rel="noopener">Privacy Policy (PDF)</a>
-            <a href="Quickfix_Credit_Services_Agreement.pdf" target="_blank" rel="noopener">Client Agreement (PDF)</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <span>© <span id="year"></span> Quickfix Financial Services. All rights reserved.</span>
-      </div>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
