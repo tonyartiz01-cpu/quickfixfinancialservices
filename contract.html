@@ -1,35 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Client Agreement | Quickfix Financial Services</title>
-<style>
-body{font-family:Inter,sans-serif;background:#f8fafc;padding:40px;}
-.container{max-width:900px;margin:auto;background:white;padding:40px;border-radius:14px;}
-button{padding:15px 30px;background:#1f6fb2;color:white;border:none;border-radius:10px;font-size:16px;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-Signature | Quickfix Financial Services</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#f6fbff;margin:0;color:#0a1b2e}
+    .wrap{max-width:820px;margin:0 auto;padding:28px 14px}
+    .card{background:#fff;border:1px solid rgba(10,27,46,.12);border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(7,20,39,.10)}
+    .btn{display:inline-block;padding:12px 16px;border-radius:14px;font-weight:800;border:1px solid rgba(10,27,46,.12);text-decoration:none}
+    .primary{background:linear-gradient(90deg,#0b78d1,#22c55e);color:#fff;border:none}
+    .muted{color:rgba(10,27,46,.70)}
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <a href="index.html" class="btn">← Back to Home</a>
 
-<div class="container">
-<h1>Client Service Agreement</h1>
+    <div class="card" style="margin-top:14px">
+      <h1>Client Agreement (E-Signature)</h1>
+      <p class="muted">
+        After you enroll, sign your agreement to begin service.
+      </p>
 
-<p>This agreement authorizes Quickfix Financial Services to perform credit repair services on your behalf.</p>
+      <!-- Replace with your HelloSign/Docusign link -->
+      <a class="btn primary" href="https://YOUR-ESIGN-LINK.com" target="_blank" rel="noopener">
+        Sign Agreement Now
+      </a>
 
-<ul>
-<li>No guarantee of score increase</li>
-<li>You may cancel at any time</li>
-<li>Work performed in compliance with CROA</li>
-</ul>
-
-<h3>Electronic Signature</h3>
-<p>By clicking below, you agree to sign electronically.</p>
-
-<button>Sign & Continue</button>
-
-<p><strong>Next Step:</strong> After signing, you will be redirected to payment.</p>
-</div>
-
+      <p class="muted" style="margin-top:14px">
+        Need to make a payment first? <a href="payment.html"><b>Enroll & Pay</b></a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
