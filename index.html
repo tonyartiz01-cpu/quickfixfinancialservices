@@ -1,227 +1,278 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quickfix Financial Services | Credit Repair Experts</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quickfix Financial Services | Credit Repair</title>
 
 <style>
-:root{
-  --blue:#1f6fb2;
+:root {
+  --blue:#1f6fd2;
   --green:#2bb673;
   --dark:#0f172a;
+  --light:#f8fafc;
 }
 
-body{
+* { box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; }
+
+body {
   margin:0;
-  font-family:Inter,sans-serif;
-  background:#f8fafc;
-  color:#0f172a;
+  background:var(--light);
+  color:var(--dark);
 }
 
-/* HEADER */
-header{
+header {
+  background:#fff;
+  padding:15px 25px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:15px 25px;
-  background:white;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-header img{
-  height:48px;
-}
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  font-weight:600;
-  color:#0f172a;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-/* HERO */
-.hero{
-  padding:90px 20px;
-  background:linear-gradient(135deg,#e6f2fb,#e9fff5);
+header img {
+  height:50px;
 }
-.hero-inner{
-  max-width:1100px;
-  margin:auto;
+
+nav a {
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+}
+
+.btn {
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+
+.btn-primary {
+  background:linear-gradient(135deg,var(--blue),var(--green));
+  color:#fff;
+}
+
+.btn-outline {
+  border:2px solid var(--blue);
+  color:var(--blue);
+}
+
+.hero {
+  padding:70px 25px;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
+  align-items:center;
+  background:linear-gradient(135deg,#eaf4ff,#e9fff5);
 }
-.hero h1{
+
+.hero h1 {
   font-size:42px;
+  margin-bottom:15px;
 }
-.hero p{
+
+.hero p {
   font-size:18px;
-  margin-top:15px;
+  line-height:1.6;
 }
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:15px 25px;
-  border-radius:10px;
-  font-weight:700;
-  text-decoration:none;
-}
-.primary{background:linear-gradient(135deg,var(--blue),var(--green));color:white;}
-.outline{border:2px solid var(--blue);color:var(--blue);}
 
-/* SECTIONS */
-section{
-  padding:80px 20px;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-h2{text-align:center;font-size:34px;margin-bottom:40px;}
-
-/* IMAGES */
-.image-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
-.image-grid img{
+.hero img {
   width:100%;
   border-radius:16px;
 }
 
-/* PRICING */
-.pricing{
+section {
+  padding:70px 25px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title {
+  text-align:center;
+  font-size:34px;
+  margin-bottom:50px;
+}
+
+.grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
-.card{
-  background:white;
-  padding:40px;
-  border-radius:18px;
-  box-shadow:0 20px 40px rgba(0,0,0,.1);
-}
-.card h3{text-align:center;font-size:24px;}
-.price{text-align:center;font-size:44px;color:var(--blue);}
-ul{list-style:none;padding:0;}
-ul li{padding:10px 0;border-bottom:1px solid #e5e7eb;}
 
-/* TRUST */
-.trust{
-  background:#020617;
-  color:white;
+.grid-3 { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+
+.card {
+  background:#fff;
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
-.review{
-  background:#020617;
-  padding:25px;
-  border:1px solid #1e293b;
+
+.card img {
+  width:100%;
   border-radius:14px;
+  margin-bottom:15px;
 }
 
-/* FOOTER */
-footer{
+.price {
+  font-size:42px;
+  color:var(--blue);
+  font-weight:bold;
+}
+
+ul { padding-left:20px; }
+
+.trust {
+  background:#0f172a;
+  color:#fff;
+  border-radius:20px;
+  padding:60px 25px;
+}
+
+.trust p { opacity:.9; }
+
+footer {
   background:#020617;
-  color:white;
-  padding:40px 20px;
+  color:#cbd5f5;
+  padding:40px 25px;
   text-align:center;
+}
+
+@media(max-width:900px){
+  .hero { grid-template-columns:1fr; }
+  header nav { display:none; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <img src="logo.png" alt="Quickfix Financial Services">
   <nav>
     <a href="#plans">Plans</a>
-    <a href="payments.html">Payments</a>
-    <a href="portal.html">Client Portal</a>
+    <a href="#payments">Payments</a>
+    <a href="#portal">Client Portal</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Restore Your Credit.<br>Build Your Future.</h1>
-      <p>We help families qualify for homes, vehicles, funding, and financial freedom.</p>
-      <a class="btn primary" href="#plans">View Plans</a>
-      <a class="btn outline" href="payments.html">Make a Payment</a>
-    </div>
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" style="width:100%;border-radius:20px;">
+  <div>
+    <h1>Restore Your Credit.<br>Build Your Financial Future.</h1>
+    <p>
+      Quickfix Financial Services helps individuals and families repair their credit,
+      remove inaccurate negative items, and position themselves to qualify for
+      vehicles, homes, funding, and long-term financial freedom.
+    </p>
+    <br>
+    <a href="#plans" class="btn btn-primary">View Plans</a>
+    <a href="#payments" class="btn btn-outline">Make a Payment</a>
   </div>
+  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="Luxury Home">
 </section>
 
+<!-- SUCCESS IMAGES -->
 <section>
-  <div class="container">
-    <h2>Success Starts Here</h2>
-    <div class="image-grid">
-      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa">
-      <img src="https://images.unsplash.com/photo-1556742049-90863d8f6b12">
-      <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c">
+  <h2 class="section-title">Success Starts Here</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588" alt="Car Dealership">
+      <h3>Vehicle Approval</h3>
+      <p>Clients qualifying for vehicles after credit restoration.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="New Home">
+      <h3>Home Ownership</h3>
+      <p>Helping families move into homes they once thought were impossible.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Happy Family">
+      <h3>Family Security</h3>
+      <p>Building generational credit and financial confidence.</p>
     </div>
   </div>
 </section>
 
+<!-- PLANS -->
 <section id="plans">
-  <div class="container">
-    <h2>Premium Credit Solutions</h2>
-    <div class="pricing">
+  <h2 class="section-title">Credit Repair Plans</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Credit Builder Plan</h3>
+      <p class="price">$400</p>
+      <ul>
+        <li>Authorized User Tradeline</li>
+        <li>Unsecured Credit Setup</li>
+        <li>Credit Monitoring</li>
+        <li>Consultation Call</li>
+      </ul>
+      <a class="btn btn-primary">Get Started</a>
+    </div>
 
-      <div class="card">
-        <h3>Credit Builder</h3>
-        <div class="price">$400</div>
-        <ul>
-          <li>Authorized User Tradeline</li>
-          <li>Credit Profile Setup</li>
-          <li>Monthly Monitoring</li>
-          <li>Consultation Call</li>
-        </ul>
-        <a class="btn primary" href="contract.html">Get Started</a>
-      </div>
+    <div class="card">
+      <h3>Premium Plan</h3>
+      <p class="price">$600</p>
+      <ul>
+        <li>Negative Item Disputes</li>
+        <li>1 High-Limit Tradeline</li>
+        <li>Client Portal Access</li>
+        <li>24/7 Support</li>
+      </ul>
+      <a class="btn btn-primary">Get Started</a>
+    </div>
 
-      <div class="card">
-        <h3>Premium</h3>
-        <div class="price">$600</div>
-        <ul>
-          <li>Negative Item Disputes</li>
-          <li>1 High-Limit Tradeline</li>
-          <li>Client Portal Access</li>
-          <li>24/7 Support</li>
-        </ul>
-        <a class="btn primary" href="contract.html">Get Started</a>
-      </div>
-
-      <div class="card">
-        <h3>Premium Plus</h3>
-        <div class="price">$800</div>
-        <ul>
-          <li>Multiple Dispute Rounds</li>
-          <li>2 High-Limit Tradelines</li>
-          <li>Inquiry Removal</li>
-          <li>Monthly Strategy Calls</li>
-        </ul>
-        <a class="btn primary" href="contract.html">Get Started</a>
-      </div>
-
+    <div class="card">
+      <h3>Premium Plus Plan</h3>
+      <p class="price">$800</p>
+      <ul>
+        <li>Multiple Dispute Rounds</li>
+        <li>2 High-Limit Tradelines</li>
+        <li>Inquiry Removal</li>
+        <li>Monthly Progress Calls</li>
+      </ul>
+      <a class="btn btn-primary">Get Started</a>
     </div>
   </div>
 </section>
 
+<!-- TRUST -->
 <section class="trust">
-  <div class="container">
-    <h2>Trusted by Clients Nationwide</h2>
-    <div class="pricing">
-      <div class="review">⭐⭐⭐⭐⭐ “I bought my first home thanks to Quickfix!”</div>
-      <div class="review">⭐⭐⭐⭐⭐ “Fast, honest, professional service.”</div>
-      <div class="review">⭐⭐⭐⭐⭐ “My score jumped over 100 points.”</div>
-    </div>
+  <h2 class="section-title">Trusted By Our Clients</h2>
+  <p>⭐⭐⭐⭐⭐ “Quickfix helped me buy my first home in under a year.”</p>
+  <p>⭐⭐⭐⭐⭐ “Professional, transparent, and results-driven.”</p>
+  <p>⭐⭐⭐⭐⭐ “Best credit decision I’ve ever made.”</p>
+</section>
+
+<!-- PAYMENTS -->
+<section id="payments">
+  <h2 class="section-title">Payments</h2>
+  <p style="text-align:center;">
+    Secure payments available via Zelle, Cash App, or invoice.
+  </p>
+  <div style="text-align:center;">
+    <a class="btn btn-primary">Make a Payment</a>
+  </div>
+</section>
+
+<!-- PORTAL -->
+<section id="portal">
+  <h2 class="section-title">Client Portal</h2>
+  <p style="text-align:center;">
+    Existing clients can log in to track disputes, documents, and progress.
+  </p>
+  <div style="text-align:center;">
+    <a class="btn btn-outline">Client Login</a>
   </div>
 </section>
 
 <footer>
-  <p>📞 1-800-916-5008 | ✉️ info@quickfixfinancialservice.com</p>
+  <p>📞 1-800-916-5008 | ✉ info@quickfixfinancialservice.com</p>
   <p>© Quickfix Financial Services</p>
 </footer>
 
